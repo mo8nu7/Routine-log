@@ -152,6 +152,63 @@
       .cal-title{ font-size: 24px; }
       .cal-grid{ font-size: 16px; gap: 8px; }
     }
+    /* 📱 모바일 전용 (iPhone 기준 최적화) */
+@media (max-width: 430px){
+
+  /* 전체 여백 축소 */
+  .page{
+    padding: 12px;
+    gap: 8px;
+  }
+
+  /* 상단 영역 압축 */
+  .top{
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 6px;
+    align-items: start;
+  }
+
+  .time{
+    font-size: 40px;     /* ⬅️ 핵심: 시간 줄이기 */
+    line-height: 1;
+  }
+  .ampm{
+    font-size: 14px;
+    margin-left: 6px;
+  }
+
+  .cal-title{
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .cal-grid{
+    font-size: 13px;
+    gap: 4px;
+  }
+  .day{
+    height: 22px;
+  }
+
+  /* ⭐ 핵심: 카드 영역을 화면에 맞게 고정 */
+  .cards{
+    height: calc(100vh - 170px); /* 상단 높이 제외 */
+    min-height: 380px;
+    grid-template-columns: 2.5fr 1fr; /* 모바일용 비율 */
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .left{
+    grid-template-rows: 5fr 1fr; /* 네가 원하는 비율 */
+    gap: 10px;
+  }
+
+  .card{
+    border-radius: 18px;
+  }
+}
+
   </style>
 </head>
 
